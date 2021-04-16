@@ -1,0 +1,42 @@
+.sidenav {
+  width: 13vw;
+  height: 92vh;
+
+  background-image: linear-gradient(to bottom, #5b0088, #240036);
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 8rem;
+  }
+
+  &__category {
+    height: 7vh;
+    margin-bottom: 1.5rem;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    align-items: center;
+    transition: background-color 0.3s;
+
+    &:hover {
+      border-right: 3px solid white;
+      background-color: #2e0048;
+    }
+  }
+
+  &__iconcategory {
+    width: 3rem;
+    fill: white;
+    margin-left: 3rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    font-style: inherit;
+  }
+}
