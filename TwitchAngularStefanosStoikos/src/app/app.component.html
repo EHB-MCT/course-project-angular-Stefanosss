@@ -4,7 +4,13 @@
   <div class="container">
     <app-side-nav></app-side-nav>
     <div class="content">
-      
+      <ul>
+        <li class="text" *ngFor="let item of items | async">
+          {{item.streamer}}
+        </li>
+      </ul>
     </div>
   </div>
 </div>
+
+
