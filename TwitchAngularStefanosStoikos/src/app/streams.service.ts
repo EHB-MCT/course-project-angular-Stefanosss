@@ -7,13 +7,18 @@ import { Observable } from 'rxjs';
 })
 export class StreamsService {
 
-  streams = [];
+ 
 
-  items: Observable<any[]>;
+  streams: Observable<any[]>;
+  
   constructor(firestore: AngularFirestore) {
-    this.items = firestore.collection('streams').valueChanges();
-    console.log(this.items);
+    this.streams = firestore.collection('streams').valueChanges();
+    console.log(this.streams);
     
+  }
+
+  getStreams(){
+    return this.streams;
   }
 
 }

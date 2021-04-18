@@ -1,0 +1,57 @@
+.stream {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  &__item {
+    margin-bottom: 3rem;
+  }
+  &__viewers {
+    display: inline-block;
+    position: absolute;
+    left: 1%;
+    bottom: 5%;
+    padding: 0.2rem 0.8rem;
+    border-radius: 0.5rem;
+    color: white;
+    background-color: rgba($color: #0a090a, $alpha: 0.78);
+    font-size: 1.5rem;
+  }
+
+  &__thumbnail {
+    position: relative;
+  }
+
+  &__streamerpic {
+    width: 20vw;
+  }
+
+  &__container {
+    display: flex;
+
+    align-items: center;
+    width: 20vw;
+  }
+
+  &__profilePicture {
+    width: 6rem;
+    border-radius: 50%;
+    margin-right: 2rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__streamername {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &__text {
+    color: white;
+    font-size: 1.5rem;
+  }
+}

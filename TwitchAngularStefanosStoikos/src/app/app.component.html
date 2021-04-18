@@ -4,11 +4,10 @@
   <div class="container">
     <app-side-nav></app-side-nav>
     <div class="content">
-      <ul>
-        <li class="text" *ngFor="let item of items | async">
-          {{item.streamer}}
-        </li>
-      </ul>
+      <app-heading-title title="Following"></app-heading-title>
+      <div class="followedStreams">
+        <app-followedstreams></app-followedstreams>
+      </div>
     </div>
   </div>
 </div>

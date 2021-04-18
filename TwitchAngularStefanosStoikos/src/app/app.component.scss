@@ -15,5 +15,8 @@
 .content {
   width: 87vw;
   height: 92vh;
+  overflow-y: scroll;
   background-image: linear-gradient(to bottom, #4b005b, #100013);
+  padding-left: 3vw;
+  padding-top: 3vh;
 }

@@ -7,13 +7,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { FollowedstreamsComponent } from './followedstreams/followedstreams.component';
+import { HeadingTitleComponent } from './heading-title/heading-title.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TopNavComponent,
-    SideNavComponent
+    SideNavComponent,
+    FollowedstreamsComponent,
+    HeadingTitleComponent
   ],
   imports: [
     BrowserModule,
