@@ -11,7 +11,6 @@ export class FollowedstreamsComponent implements OnInit {
   streams = this.streamService.getStreams();
 
   constructor(private streamService: StreamsService) {
-    console.log(this.streams);
     
   }
 

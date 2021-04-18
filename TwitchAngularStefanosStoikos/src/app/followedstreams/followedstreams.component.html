@@ -1,4 +1,6 @@
+<app-heading-title title="Following"></app-heading-title>
 <div class="stream">
+    
 <div class="stream__item" *ngFor="let stream of streams | async">
     <div class="stream__thumbnail">
         <img class="stream__streamerpic" src="{{stream.streampicture}}" alt="stream thumbnail">
@@ -13,7 +15,6 @@
             <p class="stream__text">{{stream.game}}</p>
         </div>
     </div>
-    
 </div>
 </div>
 

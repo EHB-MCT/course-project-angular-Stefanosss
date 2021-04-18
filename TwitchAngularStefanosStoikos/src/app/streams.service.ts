@@ -13,7 +13,7 @@ export class StreamsService {
   
   constructor(firestore: AngularFirestore) {
     this.streams = firestore.collection('streams').valueChanges();
-    console.log(this.streams);
+    
     
   }
 
