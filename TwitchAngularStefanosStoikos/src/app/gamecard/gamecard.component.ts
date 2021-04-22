@@ -11,8 +11,7 @@ export class GamecardComponent implements OnInit {
   games = this.gamesService.getGames();
 
   constructor(private gamesService: GamesService) {
-  console.log(this.games);
-      
+    this.games;     
   }
 
   ngOnInit(): void {

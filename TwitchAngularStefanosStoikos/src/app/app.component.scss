@@ -1,11 +1,19 @@
 .app {
   position: relative;
 }
+
 .logo {
   height: 8vh;
   position: absolute;
   top: 3vh;
   left: 2.3vw;
+}
+
+.logoBottom {
+  position: absolute;
+  bottom: 3vh;
+  left: 0.8vw;
+  height: 12vh;
 }
 
 .container {
@@ -17,6 +25,4 @@
   height: 92vh;
   overflow-y: scroll;
   background-image: linear-gradient(to bottom, #4b005b, #100013);
-  padding-left: 3vw;
-  padding-top: 3vh;
 }

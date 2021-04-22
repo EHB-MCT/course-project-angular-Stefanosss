@@ -1,0 +1,13 @@
+
+<div>
+    <p>ca marche {{stream.game}}</p>
+    <p>ca marche {{stream.streamer}}</p>
+    <video src="{{stream.video}}" controls></video>
+    <p>ca marche {{stream.streamerpicture}}</p>
+    <p>ca marche {{stream.title}}</p>
+
+    <div class="stream__chat" *ngFor="let message of streamChat">
+        <p>{{message}}</p>
+    </div>
+
+</div>

@@ -1,20 +1,22 @@
+<div class="spacing">
 <app-heading-title title="Following"></app-heading-title>
 <div class="stream">
-    
-<div class="stream__item" *ngFor="let stream of streams | async">
-    <div class="stream__thumbnail">
-        <img class="stream__streamerpic" src="{{stream.streampicture}}" alt="stream thumbnail">
-        <p class="stream__viewers">{{stream.viewers}} viewers</p>
-    </div>
+    <div class="stream__item" *ngFor="let stream of streams">
+        <a  [routerLink]="['/following', stream.id]" >
+            <div class="stream__thumbnail">
+                <img class="stream__streamerpic" src="{{stream.streampicture}}" alt="stream thumbnail">
+                <p class="stream__viewers">{{stream.viewers}} viewers</p>
+            </div>
 
-    <div class="stream__container">
-        <img class="stream__profilePicture" src="{{stream.streamerpicture}}" alt="streamer profile picture">
-        <div class="stream__info">
-            <h3 class="stream__streamername">{{stream.streamer}}</h3>
-            <p class="stream__text">{{stream.title}}</p>
-            <p class="stream__text">{{stream.game}}</p>
-        </div>
+            <div class="stream__container">
+                <img class="stream__profilePicture" src="{{stream.streamerpicture}}" alt="streamer profile picture">
+                <div class="stream__info">
+                    <h3 class="stream__streamtitle">{{stream.title}}</h3>
+                    <p class="stream__text">{{stream.streamer}}</p>
+                    <p class="stream__text">{{stream.game}}</p>
+                </div>
+            </div>
+        </a>
     </div>
 </div>
 </div>
-

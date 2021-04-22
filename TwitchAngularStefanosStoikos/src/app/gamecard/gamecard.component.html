@@ -1,7 +1,14 @@
+<div class="spacing">
+<app-heading-title title="Games"></app-heading-title>
 <div class="games">
     <div class="games__item" *ngFor="let game of games | async">
-        <img src="{{game.gamepicture}}" alt="Game picture">
-        <h3>{{game.title}}</h3>
-        
+        <img class="games__picture" src="{{game.gamepicture}}" alt="Game picture">
+        <h3 class="games__title">{{game.title}}</h3>
+        <p class="games__viewers">{{game.viewers}} viewers</p>
+        <div class="games__tags">
+            <p class="games__tag" *ngIf="game.tags[0]">{{game.tags[0]}}</p>
+            <p class="games__tag" *ngIf="game.tags[1]">{{game.tags[1]}}</p>
+        </div>
     </div>
+</div>
 </div>

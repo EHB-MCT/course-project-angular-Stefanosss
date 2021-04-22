@@ -8,13 +8,27 @@ import {StreamsService} from '../streams.service';
 })
 export class FollowedstreamsComponent implements OnInit {
 
-  streams = this.streamService.getStreams();
+  streams = [];
+
 
   constructor(private streamService: StreamsService) {
+
+    this.streamService.getStreams().subscribe(items => {
+         
+      items.map(el => {
+        this.streams.push(el);
+      })
+      
+     });
+
+     
     
   }
 
+  
+
   ngOnInit(): void {
+    
   }
 
 }

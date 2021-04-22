@@ -1,17 +1,17 @@
 <div class="sidenav">
     <div class="sidenav__content">
 
-        <div class="sidenav__category">
+        <div class="sidenav__category" routerLinkActive="sidenav__active">
             <svg class="sidenav__iconcategory">
                 <use xlink:href="../../assets/sprite.svg#icon-heart"></use>
             </svg>
-            <a [routerLink]="'/following'" routerLinkActive="router-link-active" class="sidenav__title">Following</a>
+            <a [routerLink]="'/following'" class="sidenav__title">Following</a>
         </div>
-        <div class="sidenav__category">
+        <div class="sidenav__category" routerLinkActive="sidenav__active">
             <svg class="sidenav__iconcategory">
                 <use xlink:href="../../assets/sprite.svg#icon-game-controller"></use>
             </svg>
-            <a [routerLink]="'/games'" routerLinkActive="router-link-active" class="sidenav__title">Games</a>
+            <a [routerLink]="'/games'" class="sidenav__title">Games</a>
         </div>
         <div class="sidenav__category">
             <svg class="sidenav__iconcategory">

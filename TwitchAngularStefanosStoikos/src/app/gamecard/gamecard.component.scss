@@ -1,0 +1,45 @@
+.spacing {
+  padding-left: 3vw;
+  padding-top: 3vh;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: 8.5vw 8.5vw 8.5vw 8.5vw 8.5vw 8.5vw 8.5vw 8.5vw 8.5vw;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 1rem;
+
+  &__picture {
+    width: 15rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    color: white;
+  }
+
+  &__viewers {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  &__tags {
+    display: flex;
+    align-items: center;
+  }
+
+  &__tag {
+    background-color: #444444;
+    padding: 0.5rem 1rem;
+    color: white;
+    border-radius: 1.5rem;
+    font-size: 1.3rem;
+    margin-right: 1rem;
+  }
+}

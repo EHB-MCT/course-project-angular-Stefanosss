@@ -11,6 +11,7 @@ import { FollowedstreamsComponent } from './followedstreams/followedstreams.comp
 import { HeadingTitleComponent } from './heading-title/heading-title.component';
 import { GamecardComponent } from './gamecard/gamecard.component';
 import { RouterModule } from '@angular/router';
+import { StreamComponent } from './stream/stream.component';
 
 
 @NgModule({
@@ -18,9 +19,11 @@ import { RouterModule } from '@angular/router';
     AppComponent,
     TopNavComponent,
     SideNavComponent,
+    
     FollowedstreamsComponent,
     HeadingTitleComponent,
-    GamecardComponent
+    GamecardComponent,
+    StreamComponent
   ],
   imports: [
     BrowserModule,

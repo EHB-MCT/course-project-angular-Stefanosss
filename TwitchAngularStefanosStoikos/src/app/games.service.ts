@@ -9,15 +9,18 @@ export class GamesService {
 
   games: Observable<any[]>;
 
+  
+
   constructor(firestore: AngularFirestore) {
+
     this.games = firestore.collection('games').valueChanges();
-    
     
   }
 
   getGames(){
-    return this.games;
-  }
 
+    return this.games;
+
+  }
   
 }
