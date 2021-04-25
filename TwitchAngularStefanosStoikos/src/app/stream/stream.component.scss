@@ -1,0 +1,43 @@
+.stream {
+  &__left {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__video {
+    width: 65vw;
+    height: 65vh;
+    object-fit: fill;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__streamerpicture {
+    width: 4.5rem;
+    border-radius: 50%;
+  }
+
+  &__streamer {
+    color: white;
+    font-size: 2rem;
+  }
+
+  &__title {
+    color: white;
+    font-size: 2rem;
+  }
+  &__viewers {
+    color: white;
+    font-size: 2rem;
+  }
+}

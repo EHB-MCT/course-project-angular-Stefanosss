@@ -3,9 +3,11 @@ import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument 
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class StreamsService {
 
   
@@ -21,7 +23,6 @@ export class StreamsService {
 
     this.streamsCollection = firestore.collection('streams');
   
-
     this.streams = this.streamsCollection.snapshotChanges().pipe(map(actions => actions.map(a => {
       const data = a.payload.doc.data();
       const id = a.payload.doc.id;      
@@ -29,40 +30,33 @@ export class StreamsService {
       return {id, ...data};
     })))
 
-    
-      
-      
-
-
   }
 
-  getStreams(){    
+    getStreams(){    
 
     return this.streams;
 
-  }
+    }
 
-  getStream(streamId){
+    getStream(streamId){
       
-    // this.streamDocument = this.streamsCollection.doc<any>(streamId).ref.get;
-
-    // this.stream = this.streamDocument.valueChanges();
-  
-    this.streamsCollection.doc(streamId).ref.get().then(doc => {
-      
-
-       this.streamDocument = doc.data() as AngularFirestoreDocument;
-      //  console.log(doc.data());
-
+    
+    // this.streamsCollection.doc(streamId).snapshotChanges().subscribe(item => {
+    //        this.stream = {id: item.payload.id, ...item.payload.data() as any};
               
-               
-      
-    })
+    // });
 
-    return this.streamDocument;
-    
-    
+    this.stream = this.streamsCollection.doc(streamId).valueChanges();
 
-  }
+    return this.stream;
+
+    
+   }
+
+
+
+  
+
+  
 
 }

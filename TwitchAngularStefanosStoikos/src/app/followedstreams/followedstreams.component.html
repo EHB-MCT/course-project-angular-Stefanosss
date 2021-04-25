@@ -4,7 +4,7 @@
     <div class="stream__item" *ngFor="let stream of streams">
         <a  [routerLink]="['/following', stream.id]" >
             <div class="stream__thumbnail">
-                <img class="stream__streamerpic" src="{{stream.streampicture}}" alt="stream thumbnail">
+                <img class="stream__streampicture" src="{{stream.streampicture}}" alt="stream thumbnail">
                 <p class="stream__viewers">{{stream.viewers}} viewers</p>
             </div>
 

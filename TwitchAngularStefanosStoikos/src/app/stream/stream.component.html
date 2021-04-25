@@ -1,13 +1,51 @@
 
-<div>
-    <p>ca marche {{stream.game}}</p>
-    <p>ca marche {{stream.streamer}}</p>
-    <video src="{{stream.video}}" controls></video>
-    <p>ca marche {{stream.streamerpicture}}</p>
-    <p>ca marche {{stream.title}}</p>
+<div class="stream" *ngIf="stream">
+    <div class="stream__left">
 
-    <div class="stream__chat" *ngFor="let message of streamChat">
-        <p>{{message}}</p>
+        <video class="stream__video" src="{{stream.video}}" controls></video>
+
+        <div class="stream__controls">
+            <div class="stream__info">
+                <img class="stream__streamerpicture" src="{{stream.streamerpicture}}" alt="streamer picture">
+                <div class="stream__order">
+                    <p class="stream__streamer">{{stream.streamer}}</p>
+                    <p class="stream__title">{{stream.title}}</p>
+                    <div>
+                        <svg class="stream__followicon">
+                            <use xlink:href="../../assets/sprite.svg#icon-user"></use>
+                        </svg>
+                        <p class="stream__viewers">{{stream.viewers}}</p>
+                        <p class="stream__middledot">&middot;</p>
+                        <p class="stream__game">streams: {{stream.game}}</p>
+                    </div>
+                </div>
+            </div>    
+
+            <div class="stream__actions">
+                <svg class="stream__followicon">
+                    <use xlink:href="../../assets/sprite.svg#icon-heart"></use>
+                </svg>
+                <svg class="stream__bellicon">
+                    <use xlink:href="../../assets/sprite.svg#icon-bell"></use>
+                </svg>
+                <div class="stream__subscribe">
+                    <p>Subscribe</p>
+                    <svg class="stream__staricon">
+                        <use xlink:href="../../assets/sprite.svg#icon-star-full"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
     </div>
 
+    
+
+    
+    
+    <!-- <div class="stream__chat">   
+        <h3 class="stream__chatboss">{{stream.streamer}}'s chat</h3>
+        <div class="stream__messages" *ngFor="let message of streamChat">
+            <p class="stream__message">{{message}}</p>
+        </div>
+    </div>  -->
 </div>
