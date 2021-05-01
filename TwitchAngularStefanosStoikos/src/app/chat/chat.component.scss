@@ -1,0 +1,77 @@
+.stream {
+  &__chat {
+    width: 18vw;
+    height: 88vh;
+    padding-top: 1rem;
+    margin: 2rem auto;
+    border-radius: 1rem;
+    background-color: #4a00bb;
+    margin-left: 3rem;
+  }
+
+  &__chatcontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 78vh;
+  }
+
+  &__messages {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 1.8rem;
+  }
+
+  &__messagesection {
+    height: 70vh;
+    overflow: auto;
+  }
+
+  &__chatviewer {
+    color: #00ff2b;
+  }
+
+  &__chatboss {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+  }
+
+  &__chatinput {
+    width: 16vw;
+    margin: 0 auto;
+    background-color: #370053;
+    padding: 1.5rem 1rem;
+    border: none;
+    border-radius: 0.7rem;
+    color: white;
+
+    &::placeholder {
+      color: white;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__chatform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  &__sendicon {
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+    fill: white;
+    width: 2.3rem;
+    height: 2.3rem;
+    margin-right: 1rem;
+  }
+}

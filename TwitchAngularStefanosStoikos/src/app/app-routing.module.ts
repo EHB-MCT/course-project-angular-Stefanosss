@@ -7,7 +7,8 @@ import {StreamComponent} from './stream/stream.component';
 const routes: Routes = [
   
   {path: 'following', component: FollowedstreamsComponent},
-  {path: 'following/:streamId', component: StreamComponent },
+  // {path: '', redirectTo: "/following", component: FollowedstreamsComponent},
+  {path: 'following/:streamId', component: StreamComponent},
   {path: 'games', component: GamecardComponent},
 ];
 

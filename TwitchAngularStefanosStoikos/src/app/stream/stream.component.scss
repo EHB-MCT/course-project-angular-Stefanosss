@@ -1,30 +1,48 @@
 .stream {
+  display: flex;
+
   &__left {
     display: flex;
     flex-direction: column;
-    height: 20vh;
+    width: 65vw;
+  }
+
+  &__video {
+    width: 65vw;
+    height: 70vh;
+    object-fit: fill;
   }
 
   &__controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  &__video {
-    width: 65vw;
-    height: 65vh;
-    object-fit: fill;
+    margin-top: 2rem;
   }
 
   &__info {
     display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__order {
+    display: flex;
     flex-direction: column;
+    width: 20vw;
+  }
+
+  &__moreinfo {
+    display: flex;
+    align-items: center;
   }
 
   &__streamerpicture {
-    width: 4.5rem;
+    width: 6rem;
+    border: 2px solid #8206fe;
     border-radius: 50%;
+    margin-right: 2rem;
+    margin-left: 2rem;
   }
 
   &__streamer {
@@ -34,10 +52,88 @@
 
   &__title {
     color: white;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
+
+  &__viewersicon {
+    fill: #ff8280;
+    width: 2rem;
+    height: 1.5rem;
+  }
+
   &__viewers {
+    color: #ff8280;
+    font-size: 1.6rem;
+    margin-right: 2rem;
+  }
+
+  &__followicon {
+    width: 3rem;
+  }
+
+  &__prevgame {
     color: white;
-    font-size: 2rem;
+  }
+
+  &__game {
+    color: #ff8280;
+    font-size: 1.6rem;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 13vw;
+  }
+
+  &__bellicon {
+    fill: white;
+    width: 2.5rem;
+
+    height: 5rem;
+  }
+
+  &__followicon {
+    fill: white;
+    width: 2.5rem;
+    height: 5rem;
+  }
+
+  &__staricon {
+    fill: white;
+    width: 2.5rem;
+    height: 5rem;
+    margin-right: 1rem;
+  }
+
+  &__subscribe {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    padding: 1rem;
+    border-radius: 0.7rem;
+    transition: all 0.3s;
+    background-color: #7e27ff;
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+
+  &__subscribetext {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  &__iconwrapper {
+    padding: 0 1rem;
+    height: 4.3rem;
+    transition: all 0.3s;
+    border-radius: 0.7rem;
+    background-color: #464649;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
   }
 }

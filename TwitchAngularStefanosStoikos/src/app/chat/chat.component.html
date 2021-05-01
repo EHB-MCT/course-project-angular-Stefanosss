@@ -1,0 +1,19 @@
+
+<div class="stream__chat">   
+    <h3 class="stream__chatboss">{{streamer}}'s chat</h3>
+    <div class="stream__chatcontent">
+        <div class="stream__messagesection">
+            <div class="stream__messages" *ngFor="let message of streamChat">
+                <p class="stream__message"><span class="stream__chatviewer">viewer{{message.number}}</span>: {{message.message}}</p>
+            </div>
+        </div>
+
+        
+        <div class="stream__chatform">
+            <input type="text" class="stream__chatinput" placeholder="Send a message..." #chatmessage (keydown.enter)="onSendMessage(chatmessage)" >
+            <svg class="stream__sendicon">
+                <use xlink:href="../../assets/sprite.svg#icon-send" (click)="onSendMessage(chatmessage)"></use>
+            </svg>
+        </div>
+    </div>
+</div> 

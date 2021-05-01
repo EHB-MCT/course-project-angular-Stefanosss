@@ -12,8 +12,7 @@ export class StreamComponent implements OnInit {
 
   snapshot: any;
   stream;
-  id;
-  // streamChat= [];
+  streamChat= [];
 
   constructor(private route: ActivatedRoute, private streamsService: StreamsService) { 
     
@@ -24,28 +23,23 @@ export class StreamComponent implements OnInit {
 
     const routeParams = this.route.snapshot.paramMap;
     const streamIdFromRoute = routeParams.get('streamId');
-    
-    
+
     this.streamsService.getStream(streamIdFromRoute).subscribe(item => {
       this.stream = item;
+      
+      this.stream.chat.map(message => {
+      let number = Math.floor((Math.random() * 100) + 1);
+
+      this.streamChat.push({number, message})
+
+      });    
+      
     });
 
-    
-
-
-    
-
-    
-    
-
-    // this.stream.chat.map(el => {
-    //   this.streamChat.push(el);
-    // });
     
     
     
   }
-
 
 
 }

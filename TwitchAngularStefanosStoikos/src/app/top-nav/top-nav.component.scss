@@ -67,6 +67,10 @@
     &:focus {
       outline: none;
     }
+
+    &::placeholder {
+      color: #dedee3;
+    }
   }
 
   &__icon {

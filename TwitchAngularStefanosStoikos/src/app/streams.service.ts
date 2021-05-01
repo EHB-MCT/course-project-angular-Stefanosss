@@ -12,7 +12,6 @@ export class StreamsService {
 
   
   streamsCollection: AngularFirestoreCollection<any[]>;
-  streamDocument: AngularFirestoreDocument<any>;
 
   streams: Observable<any[]>
   stream: Observable<any>;
