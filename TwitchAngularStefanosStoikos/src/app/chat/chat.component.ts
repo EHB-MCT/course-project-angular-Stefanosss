@@ -15,11 +15,6 @@ export class ChatComponent implements OnInit {
 
   ngOnInit(): void {
 
-    
-    console.log(this.streamChat);
-    
-    
-
   }
   
   onSendMessage(chatParam: HTMLInputElement){

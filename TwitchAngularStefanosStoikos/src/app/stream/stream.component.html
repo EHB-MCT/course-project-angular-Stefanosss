@@ -1,10 +1,12 @@
+<div *ngIf="spinner">
+    <app-spinner></app-spinner>
+</div>
+
 
 <div class="stream" *ngIf="stream">
-    
+
     <div class="stream__left">
-
-        <video class="stream__video" src="{{stream.video}}" controls></video>
-
+        <video class="stream__video" src="{{stream.video}}" autoplay  controls></video>
         <div class="stream__controls">
             <div class="stream__info">
                 <img class="stream__streamerpicture" src="{{stream.streamerpicture}}" alt="streamer picture">
@@ -40,13 +42,8 @@
                 </div>
             </div>
         </div>
-
-        
     </div>
 
-
     <app-chat [streamChat]="streamChat" streamer={{stream.streamer}}></app-chat>
-    
-
     
 </div>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { of } from 'rxjs';
 import {StreamsService} from '../streams.service';
 
 @Component({
@@ -6,6 +7,9 @@ import {StreamsService} from '../streams.service';
   templateUrl: './followedstreams.component.html',
   styleUrls: ['./followedstreams.component.scss']
 })
+
+
+
 export class FollowedstreamsComponent implements OnInit {
 
   streams = [];
@@ -20,12 +24,14 @@ export class FollowedstreamsComponent implements OnInit {
       })
       
      });
+    
+     
+     
+
 
      
     
   }
-
-  
 
   ngOnInit(): void {
     

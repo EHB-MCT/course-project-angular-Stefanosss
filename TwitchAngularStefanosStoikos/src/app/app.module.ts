@@ -13,6 +13,7 @@ import { GamecardComponent } from './gamecard/gamecard.component';
 import { RouterModule } from '@angular/router';
 import { StreamComponent } from './stream/stream.component';
 import { ChatComponent } from './chat/chat.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ChatComponent } from './chat/chat.component';
     HeadingTitleComponent,
     GamecardComponent,
     StreamComponent,
-    ChatComponent
+    ChatComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
